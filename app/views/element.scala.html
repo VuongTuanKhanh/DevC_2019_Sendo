@@ -1,0 +1,27 @@
+@()
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elements</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/element.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script src="@routes.Assets.versioned("javascripts/jquery.min.js")"></script>
+        <script src="@routes.Assets.versioned("javascripts/mustache.min.js")"></script>
+        <script src="@routes.Assets.versioned("javascripts/elements.js")"></script>
+    </head>
+    <body>
+        <div id="searchContainer">
+
+			<div id="searchPanel">
+				<form action="javascript:void(1)" method="post">
+					Search: <input type="text" id="searchTerm" name="searchTerm" value="Beryllium"/>
+					<button id="searchButton">Go</button>
+				</form>
+			</div>
+
+			<div id="element"></div>
+		
+		</div>
+    </body>
+</html>

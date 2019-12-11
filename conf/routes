@@ -1,0 +1,61 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+
+GET         /                               controllers.HomeController.index
+# An example controller showing how to use dependency injection
+
+GET         /count                          controllers.CountController.count
+
+# An example controller showing how to write asynchronous code
+GET         /message                        controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+
+GET         /assets/*file                   controllers.Assets.versioned(path="/public", file: Asset)
+
+# RESTful service endpoint for retrieving chemical element data.
+
+GET         /element                        controllers.ElementController.element
+
+GET         /product/getall                 controllers.ProductController.getAll()
+
+GET         /product/get                    controllers.ProductController.getCategories(categories_lv1: Int ?= -1, categories_lv2: Int ?= -1, categories_lv3: Int ?= -1, page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/categories/best        controllers.ProductController.getBestCategories(categories_lv1: Int ?= -1, categories_lv2: Int ?= -1, categories_lv3: Int ?= -1, page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/recommend              controllers.ProductController.getRecommend(page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/by/month               controllers.ProductController.getByMonth(month: Int ?= 1, page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/related                controllers.ProductController.getRelated(product_id: Int ?= -1, page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/search                 controllers.UserSearchKeywordController.getSearch(user_id: String ?= "", keyword: String ?= "", page: Int ?= 1, number: Int ?= 100)
+
+GET         /user/search/keyword            controllers.UserSearchKeywordController.getKeywordByUser(user_id: String ?= "", page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/sale/getall            controllers.ProductSaleController.getAll()
+
+GET         /product/sale/get               controllers.ProductSaleController.getOffset(page: Int ?= 1, number: Int ?= 100)
+
+GET         /product/trending/getall        controllers.ProductTrendingController.getAll()
+
+GET         /product/trending/get           controllers.ProductTrendingController.getOffset(page: Int ?= 1, number: Int ?= 100)
+
+GET         /categories/getall              controllers.CategoriesController.getAll()
+
+POST        /user/insert                    controllers.UserController.insert()
+
+POST        /user/product/log/insert        controllers.UserProductLogController.insert()
+
+GET         /user/product/log/get           controllers.UserProductLogController.getLog(user_id: String ?= "", page: Int ?= 1, number: Int ?= 100)
+# Mustache template for a chemical element
+
+GET         /template                       controllers.ElementController.template
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                   controllers.Assets.versioned(path="/public", file: Asset)
+
+GET         /images/*file                   controllers.Assets.at(path="/public/images", file)
