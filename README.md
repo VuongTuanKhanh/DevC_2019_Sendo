@@ -7,6 +7,12 @@
 
 The Kanta Service is developed and supported by KANTA Team.
 
+# Team Member
+> - Nhan Nguyen - Product Manager
+> - Vuong Tuan Khanh - Data Scientist
+> - Dang Van An - Service
+> - Tran Van Nhan - React Native
+
 # Sub-Modules Organization
 
 The project is splitted in several sub-modules:
@@ -58,4 +64,6 @@ You can follow the developments in the Kanta Service project of our github issue
 # Licensing
 
 You are welcome to use this however you wish within the MIT license.
+
+**Copyright © 2019 KANTA All rights reserved.**
 
